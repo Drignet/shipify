@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipping Calculator App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="main">
+        <figure>
+        <img src="./images/ship.jpg" width="100" height="100" alt="ship">
+        <figcaption>...we win together</figcaption>
+      </figure>
+      <div class="right">
+        <div class="air">
+          <h2>AIR SHIPING</h2>
+          <label for="weight">Weight</label>
+          <select name="weight" id="weight">
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+          </select>
+        <input type="text" inputmode="numeric" id="weight-value"><br>
+        <label for="amount">Amount ($)</label>
+          <input type="text" inputmode="numeric" id="amount-value-air"><br>
+          <label for="naira-rate">Naira Rate (#)</label>
+          <input type="text" inputmode="numeric" id="naira-rate-air"><br>
+        <button type="button" id="air-submit">submit</button>
+        <p class="results"><span>Your Air Shipping Fee is #</span><span class="air-ship-result">0</span></p>
+        </div>
+        <hr>
+        <div class="air">
+          <h2>SEA SHIPING</h2>
+          <label for="cbm">Unit (cm/mm)</label>
+          <select name="cbm" id="cbm">
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+          </select>
+        <input type="text" inputmode="numeric" placeholder="Lenght" id="lenght">
+        <input type="text" inputmode="numeric" placeholder="Width" id="width">
+        <input type="text" inputmode="numeric" placeholder="Height" id="height"><br>
+        <p>Your CBM is <span class="cbm">0</span></p>
+        <label for="amount">Amount ($)</label>
+          <input type="text" inputmode="numeric" id="amount-value-sea"><br>
+          <label for="naira-rate">Naira Rate (#)</label>
+          <input type="text" inputmode="numeric" id="naira-rate-sea"><br>
+        <button type="button" id="sea-submit">submit</button>
+        <p class="results"><span>Your Sea Shipping Fee is #</span><span class="sea-ship-result">0</span></p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
