@@ -1,5 +1,3 @@
-import openAir from "service.js"
-openAir()
 
 const weightInput = document.querySelector("#weight-value");
 const weightUnit = document.querySelector("#weight");
