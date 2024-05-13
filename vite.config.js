@@ -1,6 +1,6 @@
 // vite.config.js
 import { defineConfig } from "vite";
-import { html } from "vite-plugin-html";
+import html from "@rollup/plugin-html";
 
 export default defineConfig({
   plugins: [
