@@ -45,7 +45,7 @@ seaSubmitBtn?.addEventListener("click", () => {
   let volume = +lenght.value * +width.value * +height.value;
   if (cbmUnit.value === "cm") {
     cbmValue.textContent = (volume / 1000000).toFixed(2);
-    results[1].children[1].textContent = (
+    results[0].children[1].textContent = (
       (volume / 1000000) *
       +amountSea.value *
       +nairaRateSea.value
