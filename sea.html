@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipping Calculator App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="main">
+        <figure>
+          <img src="./images/ship.jpg" width="100" height="100" alt="ship" />
+          <div class="ball">Home</div>
+          <figcaption>...we win together</figcaption>
+        </figure>
+        <div class="right">
+          <div class="ship">
+            <h2>SEA SHIPPING</h2>
+            <form>
+              <p>
+                <label for="cbm">Unit (cm/mm)</label>
+                <select name="cbm" id="cbm">
+                  <option value="cm">cm</option>
+                  <option value="mm">mm</option>
+                </select>
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="Lenght"
+                  id="lenght"
+                />
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="Width"
+                  id="width"
+                />
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="Height"
+                  id="height"
+                />
+              </p>
+
+              <h4>Your CBM is <span class="cbm">0</span></h4>
+              <p>
+                <label for="amount">Amount ($)</label>
+                <input type="text" inputmode="numeric" id="amount-value-sea" />
+              </p>
+              <p>
+                <label for="naira-rate">Local Currency Rate</label>
+                <input type="text" inputmode="numeric" id="naira-rate-sea" />
+              </p>
+            </form>
+
+            <button type="button" id="sea-submit">submit</button>
+            <h3 class="results">
+              <span>Your Sea Shipping Fee is </span
+              ><span class="sea-ship-result">0</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
