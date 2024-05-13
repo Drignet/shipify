@@ -19,42 +19,37 @@
           <div class="ship">
             <h2>SEA SHIPPING</h2>
             <form>
-              <p>
-                <label for="cbm">Unit (cm/mm)</label>
-                <select name="cbm" id="cbm">
-                  <option value="cm">cm</option>
-                  <option value="mm">mm</option>
-                </select>
-                <input
-                  type="text"
-                  inputmode="numeric"
-                  placeholder="Lenght"
-                  id="lenght"
-                />
-                <input
-                  type="text"
-                  inputmode="numeric"
-                  placeholder="Width"
-                  id="width"
-                />
-                <input
-                  type="text"
-                  inputmode="numeric"
-                  placeholder="Height"
-                  id="height"
-                />
-              </p>
+  <fieldset>
+    <legend>Dimensions</legend>
+    <label for="cbm">Unit (cm/mm)</label>
+    <select name="cbm" id="cbm">
+      <option value="cm">cm</option>
+      <option value="mm">mm</option>
+    </select><br>
+    <input type="text" inputmode="numeric" placeholder="Length" id="length" />
+    <input type="text" inputmode="numeric" placeholder="Width" id="width" />
+    <input type="text" inputmode="numeric" placeholder="Height" id="height" />
+  </fieldset>
 
-              <h4>Your CBM is <span class="cbm">0</span></h4>
-              <p>
-                <label for="amount">Amount ($)</label>
-                <input type="text" inputmode="numeric" id="amount-value-sea" />
-              </p>
-              <p>
-                <label for="naira-rate">Local Currency Rate</label>
-                <input type="text" inputmode="numeric" id="naira-rate-sea" />
-              </p>
-            </form>
+  <h4>Your CBM is <span class="cbm">0</span></h4>
+  
+  <fieldset>
+    <legend>Amount</legend>
+    <p>
+      <label for="amount">Amount ($)</label>
+      <input type="text" inputmode="numeric" id="amount-value-sea" />
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Local Currency Rate</legend>
+    <p>
+      <label for="naira-rate">Local Currency Rate</label>
+      <input type="text" inputmode="numeric" id="naira-rate-sea" />
+    </p>
+  </fieldset>
+</form>
+
 
             <button type="button" id="sea-submit">submit</button>
             <h3 class="results">

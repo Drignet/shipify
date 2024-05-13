@@ -6,7 +6,7 @@ const nairaRateAir = document.querySelector("#naira-rate-air");
 const airSubmitBtn = document.querySelector("#air-submit");
 const seaSubmitBtn = document.querySelector("#sea-submit");
 const cbmUnit = document.querySelector("#cbm");
-const lenght = document.querySelector("#lenght");
+const length = document.querySelector("#length");
 const width = document.querySelector("#width");
 const height = document.querySelector("#height");
 const cbmValue = document.querySelector(".cbm");
@@ -42,7 +42,7 @@ airSubmitBtn?.addEventListener("click", () => {
 });
 
 seaSubmitBtn?.addEventListener("click", () => {
-  let volume = +lenght.value * +width.value * +height.value;
+  let volume = +length.value * +width.value * +height.value;
   if (cbmUnit.value === "cm") {
     cbmValue.textContent = (volume / 1000000).toFixed(2);
     results[0].children[1].textContent = (
