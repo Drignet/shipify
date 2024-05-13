@@ -170,3 +170,20 @@ button:hover {
   background: rgba(208, 20, 15, 0.6);
   transform: scale(0.9);
 }
+
+@media only screen and (max-width: 768px) {
+  .air-sea-btns {
+    grid-template-columns: 1fr;
+  }
+
+  .service-btn {
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  .ball {
+    font-size: 1.2rem;
+    height: 80px;
+    width: 80px;
+  }
+}
