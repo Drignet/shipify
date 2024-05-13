@@ -52,7 +52,7 @@ seaSubmitBtn?.addEventListener("click", () => {
     ).toFixed(2);
   } else {
     cbmValue.textContent = volume / 1000000000;
-    results[1].children[1].textContent = (
+    results[0].children[1].textContent = (
       (volume / 1000000000) *
       +amountSea.value *
       +nairaRateSea.value
