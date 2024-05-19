@@ -19,35 +19,34 @@
           <div class="air">
             <h2>AIR SHIPPING</h2>
             <form>
-  <fieldset>
-    <legend>Weight</legend>
-    <p>
-      <label for="weight">Weight</label>
-      <select name="weight" id="weight">
-        <option value="kg">kg</option>
-        <option value="g">g</option>
-      </select>
-      <input type="text" inputmode="numeric" id="weight-value" />
-    </p>
-  </fieldset>
-  
-  <fieldset>
-    <legend>Amount</legend>
-    <p>
-      <label for="amount">Amount ($)</label>
-      <input type="text" inputmode="numeric" id="amount-value-air" />
-    </p>
-  </fieldset>
+              <fieldset>
+                <legend>Weight</legend>
+                <p>
+                  <label for="weight">Weight</label>
+                  <select name="weight" id="weight">
+                    <option value="kg">kg</option>
+                    <option value="g">g</option>
+                  </select>
+                  <input type="number" id="weight-value" />
+                </p>
+              </fieldset>
 
-  <fieldset>
-    <legend>Local Currency Rate</legend>
-    <p>
-      <label for="naira-rate">Local Currency Rate</label>
-      <input type="text" inputmode="numeric" id="naira-rate-air" />
-    </p>
-  </fieldset>
-</form>
+              <fieldset>
+                <legend>Amount</legend>
+                <p>
+                  <label for="amount">Amount ($)</label>
+                  <input type="number" id="amount-value-air" />
+                </p>
+              </fieldset>
 
+              <fieldset>
+                <legend>Local Currency Rate</legend>
+                <p>
+                  <label for="naira-rate">Local Currency Rate</label>
+                  <input type="number" id="naira-rate-air" />
+                </p>
+              </fieldset>
+            </form>
 
             <button type="button" id="air-submit">submit</button>
             <h3 class="results">

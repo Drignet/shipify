@@ -19,37 +19,36 @@
           <div class="ship">
             <h2>SEA SHIPPING</h2>
             <form>
-  <fieldset>
-    <legend>Dimensions</legend>
-    <label for="cbm">Unit (cm/mm)</label>
-    <select name="cbm" id="cbm">
-      <option value="cm">cm</option>
-      <option value="mm">mm</option>
-    </select><br>
-    <input type="text" inputmode="numeric" placeholder="Length" id="length" />
-    <input type="text" inputmode="numeric" placeholder="Width" id="width" />
-    <input type="text" inputmode="numeric" placeholder="Height" id="height" />
-  </fieldset>
+              <fieldset>
+                <legend>Dimensions</legend>
+                <label for="cbm">Unit (cm/mm)</label>
+                <select name="cbm" id="cbm">
+                  <option value="cm">cm</option>
+                  <option value="mm">mm</option></select
+                ><br />
+                <input type="number" placeholder="Length" id="length" />
+                <input type="number" placeholder="Width" id="width" />
+                <input type="number" placeholder="Height" id="height" />
+              </fieldset>
 
-  <h4>Your CBM is <span class="cbm">0</span></h4>
-  
-  <fieldset>
-    <legend>Amount</legend>
-    <p>
-      <label for="amount">Amount ($)</label>
-      <input type="text" inputmode="numeric" id="amount-value-sea" />
-    </p>
-  </fieldset>
+              <h4>Your CBM is <span class="cbm">0</span></h4>
 
-  <fieldset>
-    <legend>Local Currency Rate</legend>
-    <p>
-      <label for="naira-rate">Local Currency Rate</label>
-      <input type="text" inputmode="numeric" id="naira-rate-sea" />
-    </p>
-  </fieldset>
-</form>
+              <fieldset>
+                <legend>Amount</legend>
+                <p>
+                  <label for="amount">Amount ($)</label>
+                  <input type="number" id="amount-value-sea" />
+                </p>
+              </fieldset>
 
+              <fieldset>
+                <legend>Local Currency Rate</legend>
+                <p>
+                  <label for="naira-rate">Local Currency Rate</label>
+                  <input type="number" id="naira-rate-sea" />
+                </p>
+              </fieldset>
+            </form>
 
             <button type="button" id="sea-submit">submit</button>
             <h3 class="results">
