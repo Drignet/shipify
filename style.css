@@ -51,6 +51,31 @@ h2 {
   text-align: center;
 }
 
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-55%, -20px);
+}
+
+.main-menu li {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+.main-menu a {
+  background-color: #242424;
+  color: #fff;
+  padding: 0.4em 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
 .air-sea-btns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -129,7 +154,9 @@ figure img {
 #amount-value-air,
 #amount-value-sea,
 #naira-rate-air,
-#naira-rate-sea {
+#naira-rate-sea,
+#air-clearing-fee,
+#sea-clearing-fee {
   width: 20em;
   height: 2em;
 }
@@ -170,12 +197,17 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 2.5em;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-55%, -20px);
 }
 
 .foot-menu li {
   text-decoration: none;
   list-style-type: none;
+  font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -192,5 +224,15 @@ button:hover {
     font-size: 1.2rem;
     height: 80px;
     width: 80px;
+  }
+
+  .foot-menu li {
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+  }
+
+  .main-menu li {
+    font-size: 0.8rem;
+    text-wrap: nowrap;
   }
 }
