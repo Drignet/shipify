@@ -16,14 +16,24 @@
           <a href="company.html"><li>Shipping Company</li></a>
         </ul>
       </div>
-      <ul>
-        <li><a href="air.html"></a></li>
-        <li><a href="sea.html"></a></li>
-      </ul>
-      <div class="air-sea-btns">
-        <button class="service-btn" id="airPage">Air Shipping</button>
-        <button class="service-btn" id="seaPage">Sea Shipping</button>
-      </div>
+      <main class="contact-main">
+        <h1>Contact Us</h1>
+        <form action="/submit_contact_form" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+      </main>
       <div class="footer">
         <ul class="foot-menu">
           <a href="contact.html"><li>Contact us</li></a>
