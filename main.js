@@ -20,6 +20,7 @@ const airPageBtn = document.querySelector("#airPage");
 const seaPageBtn = document.querySelector("#seaPage");
 
 const ball = document.querySelector(".ball");
+const allCompanyDiv = document.querySelector(".shipping-companies");
 
 airPageBtn?.addEventListener("click", () => {
   window.location.href = "air.html";
@@ -67,3 +68,19 @@ seaSubmitBtn?.addEventListener("click", () => {
 ball?.addEventListener("click", () => {
   window.location.href = "index.html";
 });
+
+fetch('shipping-companies.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+    // You can process your data here
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+

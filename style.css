@@ -16,6 +16,11 @@ a {
   text-decoration: none;
 }
 
+.title{
+  text-wrap: nowrap;
+  text-align: center;
+}
+
 html {
   background: url(images/ship.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
