@@ -20,7 +20,6 @@ const airPageBtn = document.querySelector("#airPage");
 const seaPageBtn = document.querySelector("#seaPage");
 
 const ball = document.querySelector(".ball");
-const allCompanyDiv = document.querySelector(".shipping-companies");
 
 airPageBtn?.addEventListener("click", () => {
   window.location.href = "air.html";
@@ -69,18 +68,102 @@ ball?.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
-fetch('shipping-companies.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.statusText}`);
+document.addEventListener('DOMContentLoaded', () => {
+  const allCompanyDiv = document.querySelector('.shipping-companies');
+
+  // JSON data
+  const data = [
+    {
+      "name": "FreightYa",
+      "phone": "+234 708 211 1555",
+      "website": "www"
+    },
+    {
+      "name": "TopFlight",
+      "phone": "+86 159 8685 6909",
+      "website": "www"
+    },
+    {
+      "name": "Kash Global",
+      "phone": "+234 814 223 6280",
+      "website": "www"
+    },
+    {
+      "name": "Main Service",
+      "phone": "+234 702 509 0079",
+      "website": "www"
+    },
+    {
+      "name": "SkyJet (Grace)",
+      "phone": "+86 166 2466 4343",
+      "website": "www"
+    },
+    {
+      "name": "SkyJet (Grace)",
+      "phone": "+86 166 2466 4343",
+      "website": "www"
+    },
+    {
+      "name": "SkyJet (Grace)",
+      "phone": "+86 166 2466 4343",
+      "website": "www"
+    },
+    {
+      "name": "SkyJet (Grace)",
+      "phone": "+86 166 2466 4343",
+      "website": "www"
+    },
+    {
+      "name": "SkyJet (Grace)",
+      "phone": "+86 166 2466 4343",
+      "website": "www"
+    },
+    {
+      "name": "SkyJet (Grace)",
+      "phone": "+86 166 2466 4343",
+      "website": "www"
+    },
+    {
+      "name": "SkyJet (Grace)",
+      "phone": "+86 166 2466 4343",
+      "website": "www"
     }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-    // You can process your data here
-  })
-  .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
+  ];
+
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+
+  // Create table header
+  const headerRow = document.createElement('tr');
+  const headers = ['NAME', 'PHONE NUMBER', 'WEBSITE'];
+  headers.forEach(headerText => {
+    const th = document.createElement('th');
+    th.textContent = headerText;
+    headerRow.appendChild(th);
+  });
+  thead.appendChild(headerRow);
+
+  // Create table body
+  data.forEach(datum => {
+    const row = document.createElement('tr');
+    Object.values(datum).forEach((text, index) => {
+      const td = document.createElement('td');
+      if (index === 2) { // Check if the current value is for the website column
+        const link = document.createElement('a');
+        link.href = text;
+        link.textContent = text;
+        link.target = "_blank";
+        td.appendChild(link);
+      } else {
+        td.textContent = text;
+      }
+      row.appendChild(td);
+    });
+    tbody.appendChild(row);
   });
 
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  allCompanyDiv.appendChild(table);
+});
